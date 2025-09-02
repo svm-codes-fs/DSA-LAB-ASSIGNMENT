@@ -6,15 +6,15 @@ int main() {
     int n;
     cout << "Enter number of strings: ";
     cin >> n;
-    cin.ignore(); // clear input buffer
+    cin.ignore(); 
 
-    char arr[50][50]; // max 50 strings, each max length 49
+    char arr[50][50]; 
     cout << "Enter " << n << " strings:" << endl;
     for (int i = 0; i < n; i++) {
         cin.getline(arr[i], 50);
     }
 
-    // Bubble sort (alphabetical using strcmp)
+    
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (strcmp(arr[i], arr[j]) > 0) {
