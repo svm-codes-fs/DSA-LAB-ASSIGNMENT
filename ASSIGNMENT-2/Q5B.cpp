@@ -7,7 +7,7 @@ int main() {
     cin >> n;
 
     int size = 3 * n - 2;
-    int *td = new int[size];  // only store non-zeros
+    int *td = new int[size];  
     for (int i = 0; i < size; i++) td[i] = 0;
 
     cout << "Enter matrix elements (" << n << "x" << n << "):" << endl;
