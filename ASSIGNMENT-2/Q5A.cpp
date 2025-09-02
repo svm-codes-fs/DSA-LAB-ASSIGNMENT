@@ -8,12 +8,12 @@ class DiagonalMatrix {
 public:
     DiagonalMatrix(int size) {
         n = size;
-        arr = new int[n]; // only store diagonal elements
+        arr = new int[n]; 
         for (int i = 0; i < n; i++) arr[i] = 0;
     }
 
     void set(int i, int j, int val) {
-        if (i == j) arr[i - 1] = val; // store only diagonal
+        if (i == j) arr[i - 1] = val; 
     }
 
     int get(int i, int j) {
