@@ -6,7 +6,7 @@ int main() {
     cout << "Enter size of square matrix: ";
     cin >> n;
 
-    int size = n * (n + 1) / 2;   // store only lower triangle
+    int size = n * (n + 1) / 2;   
     int *sym = new int[size];
     for (int i = 0; i < size; i++) sym[i] = 0;
 
@@ -15,7 +15,7 @@ int main() {
         for (int j = 1; j <= n; j++) {
             int val;
             cin >> val;
-            if (i >= j) { // store only lower triangle
+            if (i >= j) { 
                 int index = (i * (i - 1)) / 2 + (j - 1);
                 sym[index] = val;
             }
@@ -29,7 +29,7 @@ int main() {
                 int index = (i * (i - 1)) / 2 + (j - 1);
                 cout << sym[index] << " ";
             } else {
-                int index = (j * (j - 1)) / 2 + (i - 1); // mirror from lower part
+                int index = (j * (j - 1)) / 2 + (i - 1); 
                 cout << sym[index] << " ";
             }
         }
