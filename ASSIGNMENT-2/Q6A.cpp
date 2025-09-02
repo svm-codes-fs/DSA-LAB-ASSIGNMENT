@@ -3,14 +3,14 @@ using namespace std;
 
 void transpose(int mat[][3], int trans[][3]) {
     int m = mat[0][0], n = mat[0][1], t = mat[0][2];
-    trans[0][0] = n;  // rows become cols
+    trans[0][0] = n;  
     trans[0][1] = m;
     trans[0][2] = t;
 
     int k = 1;
     for (int col = 0; col < n; col++) {
         for (int i = 1; i <= t; i++) {
-            if (mat[i][1] == col) {   // if column matches
+            if (mat[i][1] == col) {   
                 trans[k][0] = mat[i][1];
                 trans[k][1] = mat[i][0];
                 trans[k][2] = mat[i][2];
