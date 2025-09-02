@@ -11,7 +11,7 @@ void add(Element a[], int n1, Element b[], int n2, Element c[], int &n3) {
     while (i < n1 && j < n2) {
         if (a[i].row == b[j].row && a[i].col == b[j].col) {
             int sum = a[i].val + b[j].val;
-            if (sum != 0) { // store only non-zero
+            if (sum != 0) { 
                 c[k++] = {a[i].row, a[i].col, sum};
             }
             i++; j++;
@@ -25,14 +25,14 @@ void add(Element a[], int n1, Element b[], int n2, Element c[], int &n3) {
         }
     }
 
-    // remaining elements
+    
     while (i < n1) c[k++] = a[i++];
     while (j < n2) c[k++] = b[j++];
 
-    n3 = k; // store size of result
+    n3 = k; 
 }
 
-// Utility to print triplet
+
 void print(Element arr[], int n) {
     for (int i = 0; i < n; i++)
         cout << arr[i].row << " " << arr[i].col << " " << arr[i].val << endl;
