@@ -8,7 +8,7 @@ int main() {
     cout << "Enter a string: ";
     getline(cin, s);
 
-    reverse(s.begin(), s.end()); // STL function
+    reverse(s.begin(), s.end());
     cout << "Reversed string: " << s << endl;
 
     return 0;
