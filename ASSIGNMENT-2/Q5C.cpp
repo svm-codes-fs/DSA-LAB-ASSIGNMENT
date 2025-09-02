@@ -6,7 +6,7 @@ int main() {
     cout << "Enter size of square matrix: ";
     cin >> n;
 
-    int size = n * (n + 1) / 2;  // only store lower-triangular part
+    int size = n * (n + 1) / 2;
     int *lt = new int[size];
     for (int i = 0; i < size; i++) lt[i] = 0;
 
@@ -16,7 +16,7 @@ int main() {
             int val;
             cin >> val;
             if (i >= j) {
-                int index = (i * (i - 1)) / 2 + (j - 1); // mapping
+                int index = (i * (i - 1)) / 2 + (j - 1);
                 lt[index] = val;
             }
         }
