@@ -7,7 +7,7 @@ int main() {
     cin >> c;
 
     if (c >= 'A' && c <= 'Z') {
-        c = c + 32; // convert using ASCII difference
+        c = c + 32; 
     }
 
     cout << "Lowercase character: " << c << endl;
