@@ -5,7 +5,7 @@ struct Element {
     int row, col, val;
 };
 
-// Transpose of sparse matrix
+
 void transpose(Element a[], int n) {
     cout << "\n(a) Transpose:\n";
     for (int i = 0; i < n; i++) {
@@ -13,7 +13,7 @@ void transpose(Element a[], int n) {
     }
 }
 
-// Addition of two sparse matrices
+
 void add(Element a[], int n1, Element b[], int n2) {
     cout << "\n(b) Addition Result:\n";
     int i = 0, j = 0;
@@ -37,20 +37,20 @@ void add(Element a[], int n1, Element b[], int n2) {
     while (j < n2) cout << b[j].row << " " << b[j].col << " " << b[j++].val << endl;
 }
 
-// Multiplication of two sparse matrices
+
 void multiply(Element a[], int n1, Element b[], int n2, int rowsA, int colsA, int colsB) {
     cout << "\n(c) Multiplication Result:\n";
 
-    // Convert B into normal matrix form for easy access
+
     int B[10][10] = {0};
     for (int i = 0; i < n2; i++) {
         B[b[i].row][b[i].col] = b[i].val;
     }
 
-    // Result matrix
+
     int C[10][10] = {0};
 
-    // Multiply
+    
     for (int i = 0; i < n1; i++) {
         int r = a[i].row, c = a[i].col, val = a[i].val;
         for (int j = 0; j < colsB; j++) {
@@ -60,7 +60,7 @@ void multiply(Element a[], int n1, Element b[], int n2, int rowsA, int colsA, in
         }
     }
 
-    // Print in triplet form
+   
     for (int i = 0; i < rowsA; i++) {
         for (int j = 0; j < colsB; j++) {
             if (C[i][j] != 0)
@@ -76,7 +76,7 @@ int main() {
 
     transpose(A, n1);
     add(A, n1, B, n2);
-    multiply(A, n1, B, n2, 2, 3, 3);  // A(2×3) * B(3×3)
+    multiply(A, n1, B, n2, 2, 3, 3);  
 
     return 0;
 }
