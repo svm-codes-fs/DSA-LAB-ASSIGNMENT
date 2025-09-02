@@ -15,9 +15,9 @@ int main() {
         for (int j = 1; j <= n; j++) {
             int val;
             cin >> val;
-            if (i - j == 1) td[i - 1] = val;          // lower diagonal
-            else if (i - j == 0) td[n + i - 1] = val; // main diagonal
-            else if (i - j == -1) td[2 * n + i - 2] = val; // upper diagonal
+            if (i - j == 1) td[i - 1] = val;         
+            else if (i - j == 0) td[n + i - 1] = val; 
+            else if (i - j == -1) td[2 * n + i - 2] = val;
         }
     }
 
